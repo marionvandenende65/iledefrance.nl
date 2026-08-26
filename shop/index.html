@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reisshop – gidsen, kaarten & boeken over Parijs en Île-de-France</title>
+  <meta name="description" content="Alles voor je reis naar Parijs en de Île-de-France: reisgidsen, kaarten, boeken over de regio, Disneyland Parijs en Frans voor onderweg — geselecteerd en direct leverbaar.">
+  <link rel="canonical" href="https://iledefrance.nl/shop/">
+  <meta property="og:title" content="Reisshop | Île-de-France">
+  <meta property="og:description" content="Reisgidsen, kaarten en boeken over Parijs, Versailles en Disneyland Parijs.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="nl_NL">
+  <meta property="og:url" content="https://iledefrance.nl/shop/">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --accent:#2b4a8b; --accent-deep:#213b70; --ink:#132630; --gallery:#0e2027;
+      --paper:#faf5ec; --cream:#f2e9d8; --sand:#ede2cd; --body:#41545c; --soft:#8a969b; --line:#e6dcc9;
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{background:var(--paper);color:var(--ink);font-family:'Archivo',system-ui,sans-serif;font-size:17px;line-height:1.7}
+    a{color:var(--accent);text-decoration:none}
+
+    header.site{background:var(--gallery);color:#fff}
+    .bar{max-width:1180px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:16px 32px}
+    .logo{display:flex;align-items:center;gap:9px;font-family:'Fraunces',serif;font-size:20px;font-weight:600;color:#fff}
+    .logo .mk{width:22px;height:22px;color:var(--accent)}
+    header.site nav{display:flex;gap:24px;flex-wrap:wrap}
+    header.site nav a{color:rgba(255,255,255,.82);font-size:14px;font-weight:500}
+    header.site nav a:hover,header.site nav a.active{color:#fff}
+    @media(max-width:820px){header.site nav{display:none}}
+
+    .hero{background:var(--gallery);color:var(--paper);padding:54px 32px 60px;text-align:center;border-bottom:4px solid var(--accent)}
+    .hero .kick{text-transform:uppercase;letter-spacing:.2em;font-size:12px;color:var(--accent);font-weight:600;margin-bottom:14px;display:block}
+    .hero h1{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(2rem,4.5vw,3rem);line-height:1.08;margin-bottom:16px;color:#fff}
+    .hero p{max-width:640px;margin:0 auto;color:#c7cdd0;font-size:1.06rem}
+
+    .wrap{max-width:1180px;margin:0 auto;padding:0 32px}
+    .shop-sec{padding:48px 0 6px}
+    .shop-sec-head{display:flex;align-items:baseline;gap:12px;border-bottom:1px solid var(--line);padding-bottom:12px;margin-bottom:24px}
+    .shop-sec-head .em{font-size:1.4rem}
+    .shop-sec-head h2{font-family:'Fraunces',serif;font-weight:600;font-size:1.6rem;color:var(--ink)}
+    .shop-sec-head p{margin-left:auto;color:var(--soft);font-size:.9rem}
+
+    .p-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:22px}
+    .p-card{display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden;transition:transform .16s,box-shadow .16s}
+    .p-card:hover{transform:translateY(-4px);box-shadow:0 16px 34px -18px rgba(19,38,48,.4)}
+    .p-img{height:200px;background:#fff;display:flex;align-items:center;justify-content:center;padding:16px;border-bottom:1px solid var(--line)}
+    .p-img img{max-width:100%;max-height:100%;object-fit:contain}
+    .p-body{display:flex;flex-direction:column;flex:1;padding:15px 15px 17px}
+    .p-title{font-weight:600;font-size:.93rem;line-height:1.35;color:var(--ink);margin-bottom:8px}
+    .p-rating{color:#e0a021;font-size:.84rem;font-weight:600;margin-bottom:10px;min-height:1.1em}
+    .p-rating .num{color:var(--soft)}
+    .p-foot{margin-top:auto;display:flex;align-items:center;justify-content:space-between;gap:8px}
+    .p-price{font-family:'Fraunces',serif;font-weight:600;font-size:1.15rem;color:var(--accent)}
+    .p-btn{background:var(--accent);color:#fff;font-size:.8rem;font-weight:600;padding:8px 13px;border-radius:8px;white-space:nowrap;transition:background .18s}
+    .p-btn:hover{background:var(--accent-deep)}
+
+    .disc{max-width:1180px;margin:22px auto 0;padding:0 32px;color:var(--soft);font-size:.82rem;line-height:1.6}
+    .loading{text-align:center;color:var(--soft);padding:40px;font-style:italic}
+
+    footer{background:var(--gallery);color:#c7cdd0;margin-top:52px;padding:36px 32px;text-align:center;font-size:.9rem}
+    footer a{color:var(--accent)}
+    footer .fl{margin-top:10px}
+  </style>
+<!-- Google Analytics 4 --><script async src="https://www.googletagmanager.com/gtag/js?id=G-SCY4CEDL57"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-SCY4CEDL57');</script>
+</head>
+<body><style id="dnd-banner-css">:root{--dnd-h:140px}#dnd-banner,#dnd-banner *{box-sizing:border-box;margin:0;padding:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;line-height:1.4;letter-spacing:normal;text-transform:none;float:none}#dnd-banner{position:sticky;top:0;z-index:2147483000;display:flex;align-items:center;gap:28px;height:var(--dnd-h);min-height:var(--dnd-h);padding:0 clamp(16px,4vw,40px);background:#fff;border-bottom:1px solid #e2e7ec;box-shadow:0 1px 3px rgba(22,32,43,.06);color:#16202b;overflow:hidden}#dnd-banner .dnd-main{flex:1 1 auto;min-width:0}#dnd-banner .dnd-kicker{display:block;font-size:12px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:#0f5c4a;margin-bottom:3px}#dnd-banner .dnd-domain{display:block;font-size:clamp(19px,2.4vw,25px);font-weight:650;color:#16202b;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}#dnd-banner .dnd-note{display:block;font-size:12.5px;color:#52606d;margin-top:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}#dnd-banner .dnd-stats{display:flex;gap:26px;flex:0 0 auto}#dnd-banner .dnd-stat{text-align:right;white-space:nowrap}#dnd-banner .dnd-stat-v{display:block;font-size:19px;font-weight:700;color:#16202b}#dnd-banner .dnd-stat-v em{font-style:normal;font-size:11.5px;font-weight:500;color:#7b8794}#dnd-banner .dnd-stat-l{display:block;font-size:10.5px;text-transform:uppercase;letter-spacing:.05em;color:#7b8794;margin-top:1px}#dnd-banner .dnd-buy{display:flex;align-items:center;gap:16px;flex:0 0 auto}#dnd-banner .dnd-price{font-size:23px;font-weight:700;color:#0f5c4a;white-space:nowrap}#dnd-banner .dnd-cta{display:inline-block;padding:12px 22px;border-radius:10px;background:#0f5c4a;color:#fff;text-decoration:none;font-size:14.5px;font-weight:600;white-space:nowrap;border:0}#dnd-banner .dnd-cta:hover{background:#0a4436;color:#fff;text-decoration:none}@media(max-width:1000px){#dnd-banner .dnd-stats{display:none}}@media(max-width:700px){#dnd-banner{height:auto;min-height:0;flex-direction:column;align-items:flex-start;gap:10px;padding:14px 16px}#dnd-banner .dnd-buy{width:100%;justify-content:space-between;flex-wrap:wrap;gap:10px}#dnd-banner .dnd-note{white-space:normal}}@media(max-width:480px){#dnd-banner .dnd-note{display:none}#dnd-banner{gap:8px;padding:12px 16px}#dnd-banner .dnd-domain{font-size:19px}}@media(max-width:400px){#dnd-banner .dnd-cta{flex:1 1 100%;text-align:center;padding:12px 16px}#dnd-banner .dnd-domain{white-space:normal}}#dnd-banner{height:52px;min-height:52px;gap:16px}#dnd-banner .dnd-kicker{display:inline;font-size:11.5px;margin:0}#dnd-banner .dnd-domain{display:inline;font-size:15px;margin-left:8px}#dnd-banner .dnd-note,#dnd-banner .dnd-stats{display:none}#dnd-banner .dnd-price{font-size:17px}#dnd-banner .dnd-cta{padding:9px 16px;font-size:13.5px}@media(max-width:700px){#dnd-banner{height:auto;min-height:0;flex-direction:row;align-items:center;flex-wrap:wrap;gap:4px 12px;padding:8px 14px}#dnd-banner .dnd-main{flex:1 1 100%;line-height:1.25}#dnd-banner .dnd-kicker{font-size:10.5px}#dnd-banner .dnd-domain{font-size:14px;margin-left:6px}#dnd-banner .dnd-buy{width:100%;gap:10px}#dnd-banner .dnd-price{font-size:15px}#dnd-banner .dnd-cta{padding:8px 14px;font-size:13px;flex:0 1 auto}}</style><div id="dnd-banner" role="complementary" aria-label="Dit domein is te koop"><div class="dnd-main"><span class="dnd-kicker">Dit domein is te koop</span><span class="dnd-domain">iledefrance.nl</span><span class="dnd-note">Prijs geldt voor de domeinnaam; de ingerichte website tegen meerprijs</span></div><div class="dnd-stats"><div class="dnd-stat"><span class="dnd-stat-v">50 <em>op de site</em></span><span class="dnd-stat-l">Artikelen</span></div><div class="dnd-stat"><span class="dnd-stat-v">11 <em>tekens</em></span><span class="dnd-stat-l">Lengte</span></div></div><div class="dnd-buy"><span class="dnd-price">€ 99</span><a class="dnd-cta" id="dnd-cta" href="https://domeinnaamdesk.nl/domein/iledefrance.nl?utm_source=minisite&amp;utm_medium=banner&amp;utm_campaign=iledefrance.nl" rel="nofollow">Bekijk op Domeinnaamdesk.nl</a></div></div><script>(function(){var a=document.getElementById("dnd-cta");if(!a)return;a.addEventListener("click",function(){try{var s=sessionStorage.getItem("dnd_sid");if(!s){s=Math.random().toString(36).slice(2)+Date.now().toString(36);sessionStorage.setItem("dnd_sid",s);}fetch("https:\/\/domeinnaamdesk.nl\/api\/track-minisite-click",{method:"POST",keepalive:true,headers:{"Content-Type":"application/json"},body:JSON.stringify({source_domain:location.hostname.replace(/^www\./,""),page_url:location.href,session_id:s})}).catch(function(){});}catch(e){}});})();</script>
+  <header class="site"><div class="bar">
+    <a class="logo" href="/"><svg class="mk" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2 L14.6 9.4 L22 12 L14.6 14.6 L12 22 L9.4 14.6 L2 12 L9.4 9.4 Z" fill="currentColor"/></svg>Île-de-France</a>
+    <nav>
+      <a href="/parijs/">Parijs</a>
+      <a href="/versailles/">Versailles</a>
+      <a href="/disneyland-parijs/">Disneyland Parijs</a>
+      <a href="/regio-en-geschiedenis/">Regio en geschiedenis</a>
+      <a href="/shop/" class="active">Reisshop</a>
+      <a href="/contact/">Contact</a>
+    </nav>
+  </div></header>
+
+  <section class="hero">
+    <span class="kick">Voor onderweg</span>
+    <h1>De reisshop voor Parijs & Île-de-France</h1>
+    <p>Reisgidsen, kaarten, boeken over de regio, Disneyland Parijs en Frans voor onderweg — geselecteerd op klantbeoordeling en alleen wat nu leverbaar is.</p>
+  </section>
+
+  <main class="wrap" id="shop"><div class="loading" id="loading">De reisshop wordt geladen…</div></main>
+
+  <p class="disc">
+    Advertentie · de knoppen leiden via affiliate-links naar bol.com. Koop je daar iets, dan ontvangen wij een kleine vergoeding — dat kost jou niets en beïnvloedt onze selectie niet. Prijzen en voorraad worden dagelijks bijgewerkt; de actuele prijs zie je altijd bij bol.com.
+  </p>
+
+  <footer>
+    <div>Île-de-France — onafhankelijke reisgids over Parijs en de regio.</div>
+    <div class="fl"><a href="/">Home</a> · <a href="/blog/">Alle artikelen</a> · <a href="/contact/">Contact</a></div>
+  </footer>
+
+  <script>
+  (function(){
+    var GROEPEN=[
+      {key:'reisgidsen',titel:'Reisgidsen Parijs & regio',em:'📘',lead:'Van Capitool tot time to momo'},
+      {key:'regio',     titel:'Boeken over de regio',    em:'🏛️',lead:'Geschiedenis, kunst en Versailles'},
+      {key:'disney',    titel:'Disneyland Parijs',       em:'🎢',lead:'Gidsen voor het park'},
+      {key:'frans',     titel:'Frans voor op reis',      em:'🇫🇷',lead:'Taalgidsen en woordenboeken'},
+      {key:'kaarten',   titel:'Kaarten & plattegronden', em:'🗺️',lead:'Stads- en wegenkaarten'}
+    ];
+    function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+    function stars(r){if(r==null)return '';var f=Math.round(Number(r));return '<span>'+'★★★★★'.slice(0,f)+'☆☆☆☆☆'.slice(0,5-f)+'</span> <span class="num">'+Number(r).toFixed(1).replace('.',',')+'</span>';}
+    function prijs(n){return n==null?'':'€ '+Number(n).toFixed(2).replace('.',',');}
+    function card(p){
+      return '<a class="p-card" href="'+esc(p.deeplink||'#')+'" target="_blank" rel="sponsored nofollow">'
+        +'<div class="p-img"><img src="'+esc(p.image)+'" alt="'+esc(p.titel)+'" loading="lazy"></div>'
+        +'<div class="p-body"><div class="p-title">'+esc(p.titel)+'</div>'
+        +'<div class="p-rating">'+stars(p.rating)+'</div>'
+        +'<div class="p-foot"><span class="p-price">'+prijs(p.prijs)+'</span><span class="p-btn">Bekijk →</span></div>'
+        +'</div></a>';
+    }
+    fetch('/shop/shop.json',{cache:'no-store'}).then(function(r){return r.ok?r.json():[];}).then(function(all){
+      all=Array.isArray(all)?all:[];
+      var html='';
+      GROEPEN.forEach(function(g){
+        var items=all.filter(function(p){return p.groep===g.key;});
+        if(!items.length)return;
+        html+='<section class="shop-sec"><div class="shop-sec-head"><span class="em">'+g.em+'</span><h2>'+esc(g.titel)+'</h2><p>'+esc(g.lead)+'</p></div><div class="p-grid">'+items.map(card).join('')+'</div></section>';
+      });
+      document.getElementById('shop').innerHTML=html||'<div class="loading">De reisshop wordt binnenkort gevuld.</div>';
+    }).catch(function(){document.getElementById('shop').innerHTML='<div class="loading">De reisshop is even niet beschikbaar.</div>';});
+  })();
+  </script>
+<style>.sfmob-t,.sfmob-b,.sfmob-p,.sfmob-bg{display:none}@media(max-width:820px){header nav,nav.primary,.masthead nav,.topbar .tl,.nav>nav{display:none!important}.sfmob-t{position:absolute;opacity:0;width:1px;height:1px;pointer-events:none}.sfmob-b{display:flex;position:fixed;top:11px;right:11px;z-index:99999;width:46px;height:46px;flex-direction:column;justify-content:center;align-items:center;gap:5px;background:#fff;border:1px solid rgba(0,0,0,.14);border-radius:11px;box-shadow:0 6px 18px rgba(0,0,0,.16);cursor:pointer}.sfmob-b span{width:22px;height:2px;background:#222;border-radius:2px;transition:transform .3s,opacity .2s}.sfmob-bg{display:block;position:fixed;inset:0;z-index:99997;background:rgba(0,0,0,0);visibility:hidden;transition:background .28s}.sfmob-p{display:flex;flex-direction:column;position:fixed;top:0;right:0;bottom:0;width:min(80vw,320px);z-index:99998;background:#fff;box-shadow:-10px 0 34px rgba(0,0,0,.22);transform:translateX(100%);transition:transform .28s ease;padding:64px 0 24px;overflow-y:auto;-webkit-overflow-scrolling:touch}.sfmob-p a{padding:14px 24px;color:#181818;text-decoration:none;font:600 1.05rem/1.25 system-ui,-apple-system,Segoe UI,sans-serif;border-bottom:1px solid rgba(0,0,0,.06)}.sfmob-p a:active{background:rgba(0,0,0,.05)}.sfmob-t:checked~.sfmob-p{transform:translateX(0)}.sfmob-t:checked~.sfmob-bg{background:rgba(0,0,0,.42);visibility:visible}.sfmob-t:checked~.sfmob-b span:nth-child(1){transform:translateY(7px) rotate(45deg)}.sfmob-t:checked~.sfmob-b span:nth-child(2){opacity:0}.sfmob-t:checked~.sfmob-b span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}}</style><style>@media(max-width:820px){footer a{display:inline-block;padding:9px 0}}</style><input type="checkbox" id="sfmob" class="sfmob-t" aria-hidden="true"><label for="sfmob" class="sfmob-b" aria-label="Menu"><span></span><span></span><span></span></label><label for="sfmob" class="sfmob-bg" aria-hidden="true"></label><nav class="sfmob-p" aria-label="Menu"><a href="/">Home</a><a href="/parijs/">Parijs</a><a href="/versailles/">Versailles</a><a href="/disneyland-parijs/">Disneyland Parijs</a><a href="/regio-en-geschiedenis/">Regio en geschiedenis</a><a href="/shop/">Reisshop</a><a href="/contact/">Contact</a><a href="/blog/">Alle artikelen</a></nav></body>
+</html>
